@@ -48,34 +48,3 @@ def info_arquivo(lista_original, arquivo_ren):
             info['hash_orig'] = item['hash']
 
     return info
-
-
-# if __name__ == '__main__':
-#     vazia = []
-#     listona = {'1153 David Bowie - Lets Dance.mp3', '4326 Beirut - 1 - The Gulag Orkestar.mp3',
-#                '5874 Alice in Chains - Down in a Hole (MTV Unplugged).mp3', '3142 Autoramas - 3 - Verdugo.mp3',
-#                '9129 Cat Power-Maybe Not.mp3'}
-#
-#     lista_orig = [{'arquivo': 'Alice in Chains - Down in a Hole (MTV Unplugged).mp3',
-#                    'hash': 'd9840588dc4f3aa0716bde3a3e05a6f8b99be2f001657fdee99e02660b712847'},
-#                   {'arquivo': 'Autoramas - 3 - Verdugo.mp3',
-#                    'hash': '5eae4ccb1424b6a6a3c4b206adf93b97041d942d283d8a389ab400cf29fd89e6'},
-#                   {'arquivo': 'Beirut - 1 - The Gulag Orkestar.mp3',
-#                    'hash': '5c0bc743da5576c5d42314ef70850a079e56e1380c38ee93e0349c62abc5a85d'},
-#                   {'arquivo': 'Cat Power-Maybe Not.mp3',
-#                    'hash': '0b7aefad8289f01c99a98fc55f5a10fb2e03c2425ab09c592aca4e7d80271d71'},
-#                   {'arquivo': 'David Bowie - Lets Dance.mp3',
-#                    'hash': 'c4a74adb883ff9d19e77f3e09b1f9e70655dda76001f2f45fcf4b81566bf2fe8'}]
-#
-#     hash_orig = '0b7aefad8289'
-#     hash_novo = '0b7aefad8289'
-#     comp = comparar_hashes(hash_orig, hash_novo)
-#     pasta = '/home/luciano/Música/pendrive/teste-randomize'
-#
-#
-#     for e in listona.copy():
-#         elem = decouple_lista(listona)
-#         print(listona)
-#         print(renomear_arquivo(lista_orig, elem))
-#         print('')
-#         print(f'Hashes to hashes: {comp}')
