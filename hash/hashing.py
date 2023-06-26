@@ -1,7 +1,12 @@
 import hashlib
 
 
-def hash_pipe(file):
+def hash_pipe(file: str) -> str:
+    """
+
+    :param file: O arquivo para o qual queremos gerar o hash
+    :return: A str com o identificador único gerado
+    """
     # file = ".\myfile.txt"             # Location of the file (can be set a different way)
     block_size = 65536                  # The size of each read from the file
 
@@ -16,9 +21,15 @@ def hash_pipe(file):
     return file_hash.hexdigest()
 
 
-def gerar_hash(lista_arq, pasta):
+def gerar_hash(lista_arq: list, pasta: str) -> dict:
+    """
+
+    :param lista_arq: A lista de arquivos na qual iremos adicionar o hash
+    :param pasta: A pasta onde estão os arquivos da lista
+    :return: Um dictionary contendo nome do arquivo e hash
+    """
     lista_ren = []
-    # Se o hash for o mesmo fazer o rename
+    # Adiciona o hash ao arquivo e devolve a lista
     for arq in lista_arq:
         chave = hash_pipe(f'{pasta}/{arq}')
         item = {'arquivo': arq, 'hash': chave}
@@ -26,9 +37,11 @@ def gerar_hash(lista_arq, pasta):
     return lista_ren
 
 
-def comparar_hashes(hash_orig, hash_ren):
+def comparar_hashes(hash_orig: str, hash_ren: str) -> bool:
+    """
+
+    :param hash_orig: O hash original que será comparado
+    :param hash_ren: O hash do arquivo que será renomeado
+    :return: Bool
+    """
     return hash_orig == hash_ren
-
-
-# def hashes_to_hashes(lista_rand):
-#     pass
