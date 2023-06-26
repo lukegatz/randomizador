@@ -1,5 +1,4 @@
 import random
-from typing import Set
 
 
 def randomizar_lista(lista: set) -> set:

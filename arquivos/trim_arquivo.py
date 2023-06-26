@@ -1,8 +1,4 @@
-import os
 import re
-
-from hash.hashing import hash_pipe
-from settings import PASTA
 
 
 def trim_file(lista: set) -> set:
@@ -20,7 +16,3 @@ def trim_file(lista: set) -> set:
         novo.add(novo_arquivo)
 
     return novo
-
-
-# def list_not_trimmed(item_da_lista):
-#     return hash_pipe(f'{PASTA}/{item_da_lista}')
